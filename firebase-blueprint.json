@@ -1,0 +1,50 @@
+{
+  "entities": {
+    "component": {
+      "title": "Component",
+      "description": "Arduino stock component or sensor",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "quantity": { "type": "integer" },
+        "minQuantity": { "type": "integer" },
+        "location": { "type": "string" },
+        "notes": { "type": "string" },
+        "userId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "category", "quantity", "userId"]
+    },
+    "project": {
+      "title": "Project",
+      "description": "Arduino circuit project",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "status": { "type": "string" },
+        "codeSnippet": { "type": "string" },
+        "circuitInstructions": { "type": "string" },
+        "neededComponents": { "type": "array" },
+        "userId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "status", "userId"]
+    }
+  },
+  "firestore": {
+    "/components/{componentId}": {
+      "schema": "component",
+      "description": "Collection of stock components"
+    },
+    "/projects/{projectId}": {
+      "schema": "project",
+      "description": "Collection of projects"
+    }
+  }
+}

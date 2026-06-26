@@ -1,0 +1,8 @@
+{
+	"appId": "com.arduinostok.app",
+	"appName": "Arduino Atölyesi",
+	"webDir": "dist",
+	"server": {
+		"androidScheme": "https"
+	}
+}

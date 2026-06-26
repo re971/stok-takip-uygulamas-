@@ -1,0 +1,6 @@
+{
+  "name": "Arduino Stok Takip",
+  "description": "Arduino geliştiricileri için parça, modül ve sensör stok takip ve devre projesi hazırlama uygulaması.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
